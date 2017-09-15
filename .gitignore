@@ -1,5 +1,5 @@
 # IntelliJ IDEA
-.Idea
+.idea
 *.iml
 
 # Target folders
@@ -21,3 +21,4 @@ tags
 
 ## Secrets ##
 client-secret.json
+src/main/docker/
