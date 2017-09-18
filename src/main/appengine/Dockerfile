@@ -1,5 +1,8 @@
 FROM gcr.io/google_appengine/openjdk
 VOLUME /tmp
+RUN ls
+RUN cd ..
+RUN ls
 COPY target/ /
 RUN ls
 ADD spark-1.0-jar-with-dependencies.jar app.jar
