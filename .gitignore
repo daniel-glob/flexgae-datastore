@@ -3,7 +3,7 @@
 *.iml
 
 # Target folders
-target/
+target/*
 !target/spark-1.0-jar-with-dependencies.jar
 build/
 out/
