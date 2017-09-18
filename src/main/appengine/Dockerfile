@@ -1,8 +1,5 @@
 FROM gcr.io/google_appengine/openjdk
 VOLUME /tmp
-RUN ls
-RUN ls
-COPY ./target/ /
-RUN ls
+ADD ~/target/ /
 ADD spark-1.0-jar-with-dependencies.jar app.jar
 CMD [ "java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
