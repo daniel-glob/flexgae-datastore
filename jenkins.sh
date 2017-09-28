@@ -17,20 +17,5 @@
 # Fail on non-zero return and print command to stdout
 set -xe
 
-# Jenkins Test Script
-function runtests () {
-  curl -X GET \
-    "https://${2}-dot-${1}.appspot.com/api/users" | \
-    tee "$ERROR_OUTPUT_DIR/response.json" | \
-    grep "^\\["
-}
-
-# Jenkins provides values for GOOGLE_PROJECT_ID and GOOGLE_VERSION_ID
-
-# Test with Maven
-mvn clean appengine:deploy \
-    -Dapp.deploy.version="${GOOGLE_VERSION_ID}" \
-    -Dapp.deploy.promote=false
-
 # End-2-End tests
 runtests "${GOOGLE_PROJECT_ID}" "${GOOGLE_VERSION_ID}"
