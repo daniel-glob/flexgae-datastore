@@ -66,14 +66,8 @@ limitations under the License.
                 <executions>
                     <execution>
                         <configuration>
-                            <mainClass>com.google.appengine.sparkdemo.Main</mainClass>
                             <outputDirectory>${project.basedir}/src/main/appengine</outputDirectory>
-                            <onejarVersion>1.0</onejarVersion>
-                            <attachToBuild>true</attachToBuild>
                         </configuration>
-                        <goals>
-                            <goal>one-jar</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
@@ -83,6 +77,9 @@ limitations under the License.
                 <executions>
                     <execution>
                         <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/src/main/appengine</outputDirectory>
+                        </configuration>
                         <goals>
                             <goal>single</goal>
                         </goals>
@@ -110,7 +107,7 @@ limitations under the License.
                     <mainClass>com.google.appengine.sparkdemo.Main</mainClass>
                     <arguments>
                         <argument>-jar</argument>
-                        <argument>${app.stage.stagingDirectory}/spark-1.0-jar-with-dependencies.jar</argument>
+                        <argument>${project.basedir}/src/main/appengine/spark-1.0.one-jar.jar</argument>
                     </arguments>
                 </configuration>
             </plugin>
