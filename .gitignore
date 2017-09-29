@@ -4,7 +4,7 @@
 
 # Target folders
 target/*
-!target/spark-1.0-jar-with-dependencies.jar
+!src/main/appengine/*.jar
 build/
 out/
 
