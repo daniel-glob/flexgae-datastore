@@ -1,4 +1,4 @@
-# SparkJava on App Engine Flexible Environment test
+# SparkJava on App Engine Flexible Environment
 
 This app demonstrates how to use [Datastore with the Google Cloud client
 library](https://github.com/GoogleCloudPlatform/google-cloud-java/tree/master/google-cloud-datastore)
